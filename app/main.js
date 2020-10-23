@@ -80,7 +80,7 @@ function shortest_word(){
     let str_split = str.split(' ');
     let min_str = "";
     let min_length = str.length;
-    for (let i = 1; i < str_split.length; i++) {
+    for (let i = 0; i < str_split.length; i++) {
         if (min_length>str_split[i].length){
             min_length=str_split[i].length;
             min_str=str_split[i];
