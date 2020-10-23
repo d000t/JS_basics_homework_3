@@ -43,22 +43,22 @@ function sum_of_minimums() {
 }
 function get_two_oldest_ages(incoming_arr){
     let arr = incoming_arr;
-    let outcoming_arr=new Array(0);
+    let outcoming_arr = new Array(0);
     let index = 0;
     let max_value;
-    while(outcoming_arr.length!=2){
+    while(outcoming_arr.length != 2){
         max_value=0;
         for (let i = 1; i < arr.length; i++) {
-        if (max_value<arr[i]){
-            max_value=arr[i];
-            index=i;
+        if (max_value < arr[i]){
+            max_value = arr[i];
+            index = i;
         }
     }
         outcoming_arr.push(max_value);
         delete arr[index];
         //arr.splice(index, 1);
     }
-    if (outcoming_arr[0]>outcoming_arr[1]){
+    if (outcoming_arr[0] > outcoming_arr[1]){
         outcoming_arr.reverse();
     }
     return outcoming_arr;
@@ -81,9 +81,9 @@ function shortest_word(){
     let min_str = "";
     let min_length = str.length;
     for (let i = 0; i < str_split.length; i++) {
-        if (min_length>str_split[i].length){
-            min_length=str_split[i].length;
-            min_str=str_split[i];
+        if (min_length > str_split[i].length){
+            min_length = str_split[i].length;
+            min_str = str_split[i];
         }
     }
     alert(`${min_str} - the shortest word\nLength of this word is ${min_length}`);
