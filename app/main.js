@@ -42,7 +42,7 @@ function sum_of_minimums() {
     alert(`Sum of minimums = ${sum_of_min}`);
 }
 function get_two_oldest_ages(incoming_arr){
-    let arr = incoming_arr;
+    let arr = incoming_arr.slice();
     let outcoming_arr = new Array(0);
     let index = 0;
     let max_value;
@@ -55,8 +55,8 @@ function get_two_oldest_ages(incoming_arr){
         }
     }
         outcoming_arr.push(max_value);
-        delete arr[index];
-        //arr.splice(index, 1);
+        //delete arr[index];
+        arr.splice(index, 1);
     }
     if (outcoming_arr[0] > outcoming_arr[1]){
         outcoming_arr.reverse();
